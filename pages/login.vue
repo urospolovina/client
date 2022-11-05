@@ -1,6 +1,6 @@
 <template>
     <div>
-        <a href="#" @click.prevent="login">Login</a>
+        <a href="#" @click.prevent="login">Login</a> <br>
         <span>{{ $auth.user }}</span>
     </div>
   
