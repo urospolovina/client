@@ -1,7 +1,7 @@
 <template>
     <div>
         <a href="#" @click.prevent="login">Login</a>
-        <span>{{ $auth.user }}</span>
+        <!-- <span>{{ $auth.user }}</span> -->
     </div>
   
 </template>
