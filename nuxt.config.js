@@ -37,7 +37,7 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
-
+  // URos
   auth: {
     strategies: {
       'laravelSanctum': {
