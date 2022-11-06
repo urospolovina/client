@@ -24,7 +24,6 @@ export default {
                     password: 'password'
                 }
             })
-            console.log($auth.user)
         }
         
     }
