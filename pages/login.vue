@@ -1,7 +1,7 @@
 <template>
     <div>
         <a href="#" @click.prevent="login">Login</a> <br>
-        <span>{{ $auth.user }}</span>
+
     </div>
   
 </template>
@@ -24,6 +24,7 @@ export default {
                     password: 'password'
                 }
             })
+            console.log($auth.user)
         }
         
     }
