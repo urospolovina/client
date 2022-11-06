@@ -42,7 +42,7 @@ export default {
     strategies: {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
-        url: 'https://mlohapi.herokuapp.com',
+        url: 'https://mlohapi.herokuapp.com/',
         endpoints: {
           login: {
             url: '/api/login',
