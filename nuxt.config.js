@@ -37,16 +37,29 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
+  axios: {
+    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
+    baseURL: 'http://localhost:8000',
+  },
+  credentials: true,
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {
+  },
+  router: {
+    middleware: ['auth']
+  },
   // URos
   auth: {
     strategies: {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
-        url: 'https://mlohapi.herokuapp.com',
+        url: 'http://localhost:8000',
+        user: {
+          property: "data"
+        },
         endpoints: {
-          login: {
-            url: '/api/login',
-          },
+          login: { url: '/api/login'},
+          user: {url: '/api/user'}
           // user: {
           //   url: '/api/user',
           // }
@@ -56,15 +69,5 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
-  },
-  credentials: true,
-  // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  },
-  router: {
-    middleware: ['auth']
-  },
+  
 }
