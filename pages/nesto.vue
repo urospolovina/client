@@ -1,12 +1,31 @@
 <template>
     <div>
-        <span>Hello</span>
+        <a href="#" @click.prevent="login">Login</a> <br>
+        <span>{{ $auth.user.name }}</span>
     </div>
   
 </template>
 
 <script>
+export default {
 
+    data (){
+        return {
+           
+        }
+    },
+
+    methods: {
+        login () {
+            this.$auth.loginWith('laravelSanctum', {
+                data: {
+                    email: 'uros@gmail.com',
+                    password: 'password'
+                }
+            })
+        }
+    }
+}
 </script>
 
 <style>
