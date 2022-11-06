@@ -46,7 +46,11 @@ export default {
         endpoints: {
           login: {
             url: '/api/login',
-          }
+          },
+          user:{
+            url: '/api/user',
+          },
+
         }
       }
     }
