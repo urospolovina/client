@@ -37,12 +37,12 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/auth-next',
   ],
-  // Uros
+
   auth: {
     strategies: {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
-        url: 'https://mlohapi.herokuapp.com',
+        url: 'http://localhost:8000',
         endpoints: {
           login: {
             url: '/api/login',
