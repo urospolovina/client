@@ -2,6 +2,9 @@
     <div>
         <a href="#" @click.prevent="login">Login</a> <br>
 
+        <div v-if="$auth.user" > {{ $auth.user }}</div>
+        <div v-else> Nema nista</div>
+
     </div>
   
 </template>
