@@ -39,7 +39,7 @@ export default {
   ],
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '.mlohapi.herokuapp.com',
+    baseURL: 'https://mlohapi.herokuapp.com',
   },
   credentials: true,
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -53,7 +53,7 @@ export default {
     strategies: {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
-        url: '.mlohapi.herokuapp.com',
+        url: 'https://mlohapi.herokuapp.com',
         user: {
           property: "data"
         },
