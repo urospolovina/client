@@ -15,7 +15,7 @@ export default {
     
     data (){
         return {
-           user: '',
+
            button: true
         }
     },
@@ -28,7 +28,6 @@ export default {
                     password: 'password'
                 }
             })
-            this.$auth.fetchUser().then((res) => {this.user = res.data})
             console.log(this.$auth.user)
             
         },
