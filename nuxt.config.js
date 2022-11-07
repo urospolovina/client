@@ -55,7 +55,9 @@ export default {
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
         user: {
-          property: "data"
+          url: '/api/user',
+          property: "data",
+          method: 'get',
         },
         endpoints: {
           login: { url: '/api/login'},
