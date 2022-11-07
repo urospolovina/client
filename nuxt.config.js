@@ -52,15 +52,20 @@ export default {
   auth: {
     strategies: {
       'laravelSanctum': {
+        token: {
+          property: 'access_token',
+          required: true,
+          type: 'Bearer'
+        },
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
-        // user: {
-        //   property: false, // <--- Default "user"
-        //   autoFetch: true,
-        // },
+        user: {
+          property: false, // <--- Default "user"
+          autoFetch: true,
+        },
         endpoints: {
-          login: { url: '/api/login'},
-          user: {url: '/api/user',  method: 'post', propertyName: false},
+          login: { url: '/api/login', method: 'post'},
+          user: {url: '/api/user',  method: 'get'},
         }
     }}
   },
