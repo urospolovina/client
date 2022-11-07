@@ -29,7 +29,7 @@ export default {
                 }
             })
             this.$auth.fetchUser().then((res) => {this.user = res.data})
-            console.log(this.user)
+            console.log(this.$auth.user)
             
         },
         // async getUser() {
