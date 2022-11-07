@@ -15,7 +15,7 @@ export default {
     
     data (){
         return {
-           
+           user: ''
         }
     },
 
@@ -27,8 +27,11 @@ export default {
                     password: 'password'
                 }
             })
-            this.$auth.fetchUser()
-            console.log(this.$auth.user)
+            
+        },
+        async getUser() {
+            await this.$auth.fetchUser().then((res) => {this.user = res.data})
+            console.log(this.user)
         }
         
     }
