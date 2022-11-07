@@ -48,12 +48,12 @@ export default {
   router: {
     middleware: ['auth']
   },
-  // URos
+  // Uros
   auth: {
     strategies: {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
-        url: 'http://localhost:8000',
+        url: 'https://mlohapi.herokuapp.com',
         user: {
           property: "data"
         },
