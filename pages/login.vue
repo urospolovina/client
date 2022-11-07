@@ -20,7 +20,7 @@ export default {
         login () {
             this.$auth.loginWith('laravelSanctum', {
                 data: {
-                    email: 'uros123@gmail.com',
+                    email: 'uros@gmail.com',
                     password: 'password'
                 }
             })
