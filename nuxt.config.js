@@ -57,14 +57,11 @@ export default {
         user: {
           url: '/api/user',
           property: "data",
-          method: 'get',
+          method: 'post',
         },
         endpoints: {
           login: { url: '/api/login'},
           user: {url: '/api/user'}
-          // user: {
-          //   url: '/api/user',
-          // }
         },
       }
     }
