@@ -24,6 +24,7 @@ export default {
                     password: 'password'
                 }
             })
+            console.log('nesto')
         }
         
     }
