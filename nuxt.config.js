@@ -54,16 +54,15 @@ export default {
       'laravelSanctum': {
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
-        user: {
-          property: false, // <--- Default "user"
-          autoFetch: true,
-        },
+        // user: {
+        //   property: false, // <--- Default "user"
+        //   autoFetch: true,
+        // },
         endpoints: {
           login: { url: '/api/login'},
-          user: {url: '/api/user',  method: 'get'}
-        },
-      }
-    }
+          user: {url: '/api/user',  method: 'post', propertyName: false},
+        }
+    }}
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
