@@ -24,7 +24,7 @@ export default {
                     password: 'password'
                 }
             })
-            console.log('nesto')
+            console.log(this.$auth.user)
         }
         
     }
