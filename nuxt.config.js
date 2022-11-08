@@ -52,11 +52,11 @@ export default {
   auth: {
     strategies: {
       local: {
-        token: {
-          property: 'access_token',
-          required: true,
-          type: 'Bearer'
-        },
+        // token: {
+        //   property: 'access_token',
+        //   required: true,
+        //   type: 'Bearer'
+        // },
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
         // user: {
@@ -65,6 +65,7 @@ export default {
         // },
         endpoints: {
           login: { url: '/api/login', method: 'post'},
+          user: {url: '/api/user', method: 'get'}
           // user: false,
         }
     }}
