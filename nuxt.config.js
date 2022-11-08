@@ -43,9 +43,9 @@ export default {
     credentials: true
   },
   proxy: {
-    'https://mlohapi.herokuapp.com': {
+    '/laravel': {
       target: 'https://laravel-auth.nuxtjs.app',
-      pathRewrite: { 'https://mlohapi.herokuapp.com': '/api' }
+      pathRewrite: { '^/laravel': '/' }
     }
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
