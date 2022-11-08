@@ -59,10 +59,10 @@ export default {
         },
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
-        user: {
-          property: false, // <--- Default "user"
-          // autoFetch: false,
-        },
+        // user: {
+        //   property: false, // <--- Default "user"
+        //   // autoFetch: false,
+        // },
         endpoints: {
           login: { url: '/api/login', method: 'post'},
           // user: false,
