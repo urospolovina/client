@@ -65,11 +65,11 @@ export default {
         },
         endpoints: {
           login: { url: '/api/login', method: 'post'},
-          user: {url: '/api/user',  method: 'get'},
+          user: false,
         }
     }}
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  
+  // user: {url: '/api/user',  method: 'get'},
 }
