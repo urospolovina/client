@@ -28,6 +28,7 @@ export default {
                     password: 'password'
                 }
             })
+            this.$auth.fetchUser()
             console.log(this.$auth.user)
             
         },
