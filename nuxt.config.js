@@ -51,7 +51,6 @@ export default {
   // Uros
   auth: {
     local: {
-      'laravelSanctum': {
         token: {
           property: 'access_token',
           required: true,
@@ -67,7 +66,7 @@ export default {
           login: { url: '/api/login', method: 'post'},
           // user: false,
         }
-    }}
+    }
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
