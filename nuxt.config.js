@@ -50,7 +50,7 @@ export default {
   },
   // Uros
   auth: {
-    strategies: {
+    local: {
       'laravelSanctum': {
         token: {
           property: 'access_token',
