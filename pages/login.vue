@@ -2,7 +2,7 @@
     <div>
         <a href="#" @click.prevent="login">Login</a> <br>
 
-        <div v-if="$auth.user" > {{ $auth.user }}</div>
+        <div v-if="this.$store.state.auth.user" > {{ this.$store.state.auth.user }}</div>
         <div v-else> Nema nista</div>
 
     </div>
@@ -28,7 +28,7 @@ export default {
                     password: 'password'
                 }
             })
-            this.$auth.fetchUser()
+            this.$auth.setUser(user)
             console.log(this.$auth.user)
             
         },
