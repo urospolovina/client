@@ -22,7 +22,7 @@ export default {
 
     methods: {
         login () {
-            this.$auth.loginWith('local', {
+            this.$auth.loginWith('laravelSanctum', {
                 data: {
                     email: 'uros@gmail.com',
                     password: 'password'

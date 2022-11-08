@@ -39,9 +39,15 @@ export default {
   ],
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: 'https://mlohapi.herokuapp.com',
+    proxy: true,
+    credentials: true
   },
-  credentials: true,
+  proxy: {
+    'https://mlohapi.herokuapp.com': {
+      target: 'https://laravel-auth.nuxtjs.app',
+      pathRewrite: { 'https://mlohapi.herokuapp.com': '/api' }
+    }
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
@@ -51,22 +57,11 @@ export default {
   // Uros
   auth: {
     strategies: {
-      local: {
-        // token: {
-        //   property: 'access_token',
-        //   required: true,
-        //   type: 'Bearer'
-        // },
+      'laravelSanctum': {
         provider: 'laravel/sanctum',
         url: 'https://mlohapi.herokuapp.com',
-        // user: {
-        //   property: false, // <--- Default "user"
-        //   // autoFetch: false,
-        // },
         endpoints: {
           login: { url: '/api/login', method: 'post'},
-          user: {url: '/api/user', method: 'get'}
-          // user: false,
         }
     }}
   },
