@@ -61,7 +61,7 @@ export default {
         url: 'https://mlohapi.herokuapp.com',
         user: {
           property: false, // <--- Default "user"
-          autoFetch: false,
+          // autoFetch: false,
         },
         endpoints: {
           login: { url: '/api/login', method: 'post'},
